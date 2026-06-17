@@ -37,7 +37,7 @@ cat_features = [
 # TODO: use the process_data function provided to process the data.
 X_train, y_train, encoder, lb = process_data(
     # your code here
-    # use the train dataset 
+    # use the train dataset
     # use training=True
     # do not need to pass encoder and lb as input
     )
@@ -63,7 +63,7 @@ save_model(encoder, encoder_path)
 # load the model
 model = load_model(
     model_path
-) 
+)
 
 # TODO: use the inference function to run the model inferences on the test dataset.
 preds = None  # your code here

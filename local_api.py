@@ -8,9 +8,7 @@ r = None  # Your code here
 # TODO: print the status code
   # print()
 # TODO: print the welcome message
-# print()
-
-
+  # print()
 
 data = {
     "age": 37,
@@ -32,7 +30,7 @@ data = {
 # TODO: send a POST using the data above
 r = None # Your code here
 
-# TODO: print the status code
+  # TODO: print the status code
 # print()
 # TODO: print the result
 # print()

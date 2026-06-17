@@ -4,6 +4,7 @@ from ml.data import process_data
 # TODO: add necessary import
 
 # Optional: implement hyperparameter tuning.
+
 def train_model(X_train, y_train):
     """
     Trains a machine learning model and returns it.
@@ -62,6 +63,7 @@ def inference(model, X):
     # TODO: implement the function
     pass
 
+
 def save_model(model, path):
     """ Serializes model to a file.
 
@@ -74,6 +76,7 @@ def save_model(model, path):
     """
     # TODO: implement the function
     pass
+
 
 def load_model(path):
     """ Loads pickle file from `path` and returns it."""
