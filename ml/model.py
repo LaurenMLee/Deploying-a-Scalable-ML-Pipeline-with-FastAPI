@@ -5,6 +5,7 @@ from ml.data import process_data
 from sklearn.ensemble import RandomForestClassifier
 # Optional: implement hyperparameter tuning.
 
+
 def train_model(X_train, y_train):
     """
     Trains a machine learning model and returns it.
@@ -126,11 +127,11 @@ def performance_on_categorical_slice(
     fbeta : float
 
     """
-    # TODO: implement the function 
+    # TODO: implement the function
     sliced_data = data[data[column_name] == slice_value]
     X_slice, y_slice, _, _ = process_data(
         # your code here
-        # for input data, use data in column given as "column_name", with the slice_value 
+        # for input data, use data in column given as "column_name", with the slice_value
         # use training = False
         sliced_data,
         categorical_features=categorical_features,
