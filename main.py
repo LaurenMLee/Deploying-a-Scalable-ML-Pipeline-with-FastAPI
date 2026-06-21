@@ -9,6 +9,7 @@ from ml.model import inference, load_model
 
 # DO NOT MODIFY
 
+
 class Data(BaseModel):
     age: int = Field(..., example=37)
     workclass: str = Field(..., example="Private")
@@ -39,12 +40,14 @@ model = load_model(path)
 
 app = FastAPI()  # your code here
 
+
 # TODO: create a GET on the root giving a welcome message
 @app.get("/")
 async def get_root():
     """ Say hello!"""
     # your code here
     return {"message": "Hello World"}
+
 
 # TODO: create a POST on a different path that does model inference
 @app.post("/data/")
@@ -74,8 +77,8 @@ async def post_inference(data: Data):
         # do not need to pass lb as input
         data,
         categorical_features=cat_features,
-        training =False,
-        encoder =encoder,
+        training=False,
+        encoder=encoder,
     )
     _inference = inference(model, data_processed)  # your code here to predict the result using data_processed
     return {"result": apply_label(_inference)}

@@ -28,14 +28,13 @@ data = {
 }
 
 # TODO: send a POST using the data above
-r = requests.post(
+r=requests.post(
   "http://127.0.0.1:8000/data/",
   data = json.dumps(data),
   headers={"Content-Type": "application/json"},
-) # Your code here
-  
+)  # Your code here
 
-  # TODO: print the status code
+# TODO: print the status code
 print("Status Code:", r.status_code)
 # TODO: print the result
 print("Result:", r.json()["result"])

@@ -1,4 +1,4 @@
-import pytest
+# import pytest
 # TODO: add necessary import
 import pandas as pd
 from sklearn.model_selection import train_test_split
