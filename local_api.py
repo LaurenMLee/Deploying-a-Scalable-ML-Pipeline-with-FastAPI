@@ -28,9 +28,9 @@ data = {
 }
 
 # TODO: send a POST using the data above
-r=requests.post(
+r = requests.post(
   "http://127.0.0.1:8000/data/",
-  data = json.dumps(data),
+  data=json.dumps(data),
   headers={"Content-Type": "application/json"},
 )  # Your code here
 
