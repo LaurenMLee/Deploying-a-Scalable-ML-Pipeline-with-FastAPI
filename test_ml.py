@@ -2,7 +2,8 @@ import pytest
 # TODO: add necessary import
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from ml.model import compute_model_metrics
+from ml.model import compute_model_metrics,save_model,train_model
+import os
 
 # TODO: implement the first test. Change the function name and input as needed
 
@@ -48,11 +49,20 @@ def test_all_metrics_returned():
 
 
 # TODO: implement the third test. Change the function name and input as needed
-def test_model_saved():
+def test_model_saved(tmp_path):
+    
     """
     # add description for the third test
 
     This test confims that the model is saved successfully.
     """
     # Your code here
-    pass
+    x_train = [[1,0],[1,1],[0,1,],[0,0]]
+    y_train = [1,0,1,0]
+
+    model = train_model(x_train,y_train)
+    file_path =  tmp_path / "modeltest.pkl"
+    save_model (model,file_path)
+
+    assert file_path.exists()
+    assert file_path.stat().st_size > 0
