@@ -14,16 +14,16 @@ def test_data_split_ratio():
     This test confirms that the data split occurs in an 80% training/ 20% testing ratio
     """ 
     # Your code here
-     data = pd.read_csv("data/census.csv")
+    data = pd.read_csv("data/census.csv")
 
-     train, test = train_test_split(data, test_size=0.20, random_state=42)
+    train, test = train_test_split(data, test_size=0.20, random_state=42)
 
-     total_rows = len(data)
-     train_ratio = round(len(train)/total_rows,1)
-     test_ratio = round(len(test)/total_rows,1)
+    total_rows = len(data)
+    train_ratio = round(len(train)/total_rows,1)
+    test_ratio = round(len(test)/total_rows,1)
 
-     assert train_ratio == 0.8
-     assert test_ratio == 0.2
+    assert train_ratio == 0.8
+    assert test_ratio == 0.2
 
 
 # TODO: implement the second test. Change the function name and input as needed
@@ -50,7 +50,7 @@ def test_all_metrics_returned():
 
 # TODO: implement the third test. Change the function name and input as needed
 def test_model_saved(tmp_path):
-    
+
     """
     # add description for the third test
 
